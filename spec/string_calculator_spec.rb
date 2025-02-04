@@ -21,5 +21,11 @@ RSpec.describe StringCalculator do
         expect(calculator.add('1,5')).to eq(6)
       end
     end
+
+    context 'when input contains multiple numbers' do
+      it 'returns their sum' do
+        expect(calculator.add('1,2,3,4')).to eq(10)
+      end
+    end
   end
 end
